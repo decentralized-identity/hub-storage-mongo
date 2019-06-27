@@ -1,0 +1,47 @@
+{
+  "extends": "tslint-config-airbnb",
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**",
+      "tests/**"
+    ]
+  },
+  "rules": {
+    "completed-docs": [
+      true,
+      {
+        "classes": {"visibilities": ["exported"]},
+        "enums": {"visibilities": ["exported"]},
+        "functions": {"visibilities": ["exported"]},
+        "interfaces": {"visibilities": ["exported"]},
+        "methods": {"privacies": ["public", "protected"], 
+          "locations": ["all"]},
+          "properties": {"privacies": ["public", "protected"], 
+            "locations": ["all"]},
+            "types": {"visibilities": ["all"]}
+      }
+    ],
+    "file-header": [
+      true,
+      {
+        "match": "Microsoft Corporation",
+        "allow-single-line-comments": true,
+        "default": "Copyright (c) Microsoft Corporation. All rights reserved.\nLicensed under the MIT License."
+      }
+    ],
+    "jsdoc-format": [
+      true,
+      "check-multiline-start"
+    ],
+    "max-line-length": [
+      true,
+      160
+    ],
+    "space-before-function-paren": true,
+    "variable-name": [
+      true, 
+      "check-format",
+      "allow-leading-underscore"
+    ]
+  }
+}

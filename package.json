@@ -1,0 +1,51 @@
+{
+  "name": "@microsoft/hub-mongo-connector",
+  "version": "1.0.0-alpha.2",
+  "description": "Identity Hub storage driver for MongoDB.",
+  "repository": "https://github.com/Microsoft/hub-mongo-connector",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "nyc jasmine-ts --config=./tests/jasmine.json",
+    "lint": "tslint --fix --project .",
+    "check-lint": "tslint --project ."
+  },
+  "author": "Microsoft Corporation",
+  "license": "MIT",
+  "dependencies": {
+    "@decentralized-identity/hub-node-core": "0.1.4",
+    "mongodb": "3.1.13",
+    "yup": "0.27.0"
+  },
+  "devDependencies": {
+    "@types/jasmine": "3.3.12",
+    "@types/mongodb": "3.1.19",
+    "@types/yup": "0.26.12",
+    "jasmine": "3.3.1",
+    "jasmine-reporters": "2.3.2",
+    "jasmine-spec-reporter": "4.2.1",
+    "jasmine-ts": "0.3.0",
+    "nyc": "14.0.0",
+    "ts-node": "7.0.1",
+    "tslint": "5.15.0",
+    "tslint-config-airbnb": "5.11.1",
+    "typescript": "3.4.1"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "include": [
+      "lib/**"
+    ],
+    "reporter": [
+      "text",
+      "cobertura",
+      "html"
+    ]
+  }
+}
